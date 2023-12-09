@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository presents a comprehensive analysis of the cost-effectiveness of an employee payroll scheme. The analysis aims to evaluate the financial efficiency and impact on organizational resources associated with different payroll strategies.
+This repository focuses on the analysis and scoring of employees for layoff assessment. The analysis considers factors such as total working hours, total working days, and employee salary per hour. Scoring is performed with a weight of 40% on total working hours, 40% on salary per hour, and 20% on total working days. The scoring uses quartiles for each assessment to obtain appropriate scores. The results identify employees with high scores and those with low scores. These scores serve as a reference for company's layoff scheme.
 
 ## Methodology
 
