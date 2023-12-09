@@ -1,9 +1,3 @@
--- OBJECTIVE 
--- Make an analysis to “Cost-Effectiveness Analysis of Employee Payroll Scheme” from the provided data with the objectives below: 
--- 1. Add another column to make a payroll scoring effectiveness in the scale of 1-100 for each employee in the employees.csv based on the given parameters such as salary, join date, resign date, date, checkin, and checkout
--- 2. Analyze which employee that need to get layoff based on the assessment of payroll scoring effectiveness
-
--- QUERY
 WITH wow AS(
   WITH cte1 AS -- RATA-RATA SALARY PER BRANCH
   (
@@ -90,6 +84,3 @@ WITH wow AS(
 SELECT *,
 (poin_jam_kerja + poin_hari_kerja + poin_salary) AS poin_total
 FROM wow
-
--- ANALISIS
--- Dalam query yang dilakukan, didapatkan beberapa kolom yang meliputi total jam kerja, total hari kerja, dan salary per jam karyawan. Dari ketiga kolom tersebut, dilakukan scoring untuk melakukan assessment terkait lay off karyawan. Scoring yang dilakukan memiliki bobot 40% pada total jam kerja, 40% pada salary per jam, dan 20% pada total hari kerja. Dalam kasus ini, digunakan kuartil pada masing-masing penilaian untuk mendapatkan score yang sesuai. Hasilnya, ditemukan beberapa karyawan dengan score yang tinggi serta karyawan yang memiliki score rendah. Score ini digunakan sebagai acuan dalam lay off scheme di Mekari. Asumsi yang digunakan adalah score 60 menjadi score minimum untuk dapat bertahan di Mekari. Hasil dari query di SQL akan diolah menggunakan Python. Hasilnya, terdapat 23 karyawan dengan score di bawah 60 sehingga Mekari dapat melakukan lay off pada karyawan-karyawan tersebut. Hal tersebut disebabkan karena karyawan dengan score rendah memiliki kinerja yang tidak terlalu baik sehingga dapat merugikan Mekari.
